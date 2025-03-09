@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Registrasi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 350px;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin: 10px 0 5px;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .radio-group {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .radio-group label {
+            margin-left: 5px;
+        }
+
+        .btn-submit {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        .btn-submit:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Container Form -->
+    <div class="container">
+        <h2>Form Registrasi</h2>
+        <form action="" method="post">
+            <label>Username:</label>
+            <input type="text" name="Username" placeholder="Masukkan Username" required minlength="3">
+
+            <label>Email:</label>
+            <input type="email" name="Email" placeholder="Masukkan email" required>
+
+            <label>Password:</label>
+            <input type="password" name="Password" placeholder="Masukkan password" required minlength="6">
+
+            <label>Jenis Kelamin:</label>
+            <div class="radio-group">
+                <input type="radio" name="kelamin" value="laki-laki" id="laki">
+                <label for="laki">Laki-Laki</label>
+
+                <input type="radio" name="kelamin" value="perempuan" id="perempuan">
+                <label for="perempuan">Perempuan</label>
+            </div>
+
+            <label>Alamat:</label>
+            <textarea name="Alamat" placeholder="Masukkan alamat" required rows="4"></textarea>
+
+            <label>Jurusan:</label>
+            <select name="jurusan" required>
+                <option value="">Pilih Jurusan</option>
+                <option value="RPL">RPL</option>
+                <option value="PGPAUD">PGPAUD</option>
+                <option value="PGSD">PGSD</option>
+                <option value="TEKKOM">TEKKOM</option>
+                <option value="Multimedia">Multimedia</option>
+            </select>
+
+            <label>Tanggal Lahir:</label>
+            <input type="date" name="ttl" required>
+
+            <label>Warna Favorit:</label>
+            <input type="color" name="color">
+
+            <label>Unggah Foto:</label>
+            <input type="file" name="file" required>
+
+            <input type="submit" value="Submit" class="btn-submit">
+        </form>
+    </div>
+
+</body>
+</html>
